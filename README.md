@@ -1,3 +1,50 @@
+# MiniMind 订单工具调用实验
+
+基于 [MiniMind-3](https://github.com/jingyaogong/minimind)，训练小模型完成「查订单 → 查单价 → 算总额」。
+使用 Python 和 PyTorch 在单张 RTX 5060 Laptop GPU 上完成监督微调（SFT）和 GRPO 奖励对照实验。
+
+## 实验结果
+
+| 评测集 | 模型或训练方式 | 完整任务成功率 |
+|---|---|---:|
+| 8 条留出模拟订单 | 原版 MiniMind-3 | 0/8 |
+| 同一批 8 条订单 | 订单专项 SFT | 6/8（75%） |
+| 24 条新留出模拟订单 | 订单专项 SFT | 18/24（75%） |
+| 同一批 24 条订单 | GRPO，仅奖励最终金额 | 24/24（100%） |
+| 同一批 24 条订单 | GRPO，同时评价金额和工具调用过程 | 24/24（100%） |
+
+完整成功要求三个工具按顺序调用、参数全部正确，并输出正确的最终金额。
+两种 GRPO 方案从同一份 SFT 权重出发，在这批模拟订单上取得相同成绩。
+
+## 代码与数据
+
+- [订单评测](scripts/order_eval.py)
+- [GRPO 对照实验](scripts/order_grpo.py)
+- [256 条 SFT 示范](dataset/order_sft_train.jsonl)
+- [逐题评测报告](results/)
+
+## 运行
+
+本次实验使用 Python 3.11、PyTorch 2.8.0（CUDA 12.8）和 PyArrow 20.0.0。
+按下方原项目说明安装依赖，并把作者的 `full_sft_768.pth` 放进 `out/`。
+
+```bash
+.venv/bin/python scripts/order_eval.py --weight full_sft --device cuda
+
+(cd trainer && ../.venv/bin/python train_full_sft.py \
+  --data_path ../dataset/order_sft_train.jsonl \
+  --from_weight full_sft --save_weight order_sft \
+  --epochs 3 --batch_size 2 --learning_rate 5e-5 \
+  --num_workers 0 --max_seq_len 768 --device cuda:0)
+
+.venv/bin/python scripts/order_eval.py --weight order_sft --device cuda
+.venv/bin/python -u scripts/order_grpo.py
+```
+
+---
+
+## 原项目文档
+
 <div align="center">
 
 ![logo](./images/logo.png)

@@ -1,0 +1,298 @@
+{
+  "weight": "full_sft",
+  "seed": 42,
+  "total": 8,
+  "summary": {
+    "sequence_ok": 0,
+    "arguments_ok": 0,
+    "amount_ok": 0,
+    "success": 0
+  },
+  "cases": [
+    {
+      "order_id": "A102",
+      "question": "A102 这笔订单一共要付多少钱？",
+      "expected_total": "59.70",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "amount"
+          },
+          "result": {
+            "error": "找不到该订单"
+          }
+        },
+        {
+          "turn": 2,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 1,
+            "unit_price": 10
+          },
+          "result": {
+            "total": "10.00"
+          }
+        }
+      ],
+      "answer": "JSON 格式已获取，可直接用于查询和计算。  \n\n根据订单总金额为10.00元，JSON 格式的订单总金额为：  \n10.00元 × 10 = 100元。  \n\n所以，JSON 格式的订单总金额为 **100元**。",
+      "sequence_ok": false,
+      "arguments_ok": false,
+      "amount_ok": false,
+      "success": false
+    },
+    {
+      "order_id": "A157",
+      "question": "帮我算一下订单 A157 的商品总金额。",
+      "expected_total": "91.00",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "get_exchange_rate",
+          "arguments": {
+            "order_id": "A157"
+          },
+          "result": {
+            "error": "未知工具"
+          }
+        },
+        {
+          "turn": 2,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 1,
+            "unit_price": 100
+          },
+          "result": {
+            "total": "100.00"
+          }
+        }
+      ],
+      "answer": "我来帮你计算订单 A 的总金额。\n\n订单 A 的总金额是：0.00（订单 A）\n\n现在，我来给你计算：\n\n订单 A 的总金额：0.00\n\n计算：0.00 × 1 = 0.00\n\n所以，订单 A 的总金额是：0.00。\n\n关于“JSON”，我需要确认一下是否正确。\n\n实际上，订单 A 订单 A 的总金额是：0.00（订单 A）\n\n计算",
+      "sequence_ok": false,
+      "arguments_ok": false,
+      "amount_ok": false,
+      "success": false
+    },
+    {
+      "order_id": "B203",
+      "question": "请核对 B203 这单的商品合计。",
+      "expected_total": "43.75",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "B203"
+          },
+          "result": {
+            "product_id": "P417",
+            "quantity": 5
+          }
+        },
+        {
+          "turn": 2,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 5,
+            "unit_price": "J%"
+          },
+          "result": {
+            "error": "数量或单价格式错误"
+          }
+        }
+      ],
+      "answer": "根据查询结果，我们发现商品的“J%”值是“P417”。\n\n接下来，我将计算总金额：\n\n总金额 = 5 × J% = 5 × 5 = 25元\n\n因此，**总金额 = 总商品数量**。\n\n最终结果：  \n- 商品：P417  \n- 总金额：25元",
+      "sequence_ok": false,
+      "arguments_ok": false,
+      "amount_ok": false,
+      "success": false
+    },
+    {
+      "order_id": "B286",
+      "question": "订单 B286 的商品加起来多少钱？",
+      "expected_total": "86.80",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "B286"
+          },
+          "result": {
+            "product_id": "P539",
+            "quantity": 7
+          }
+        },
+        {
+          "turn": 2,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 7
+          },
+          "result": {
+            "error": "数量或单价格式错误"
+          }
+        }
+      ],
+      "answer": "抱歉，您在商品总价中出现了数量或单价的错误。实际上，订单中存在商品的数量或单价的错误。这可能是因为商品数量或单价的误导，或者您需要更正或重新计算。\n\n如果商品数量或单价的错误是由于计算错误导致的，那么正确处理应该是：\n\n1. 计算商品总价：订单 B286 的商品总价为 $ 7 \\times 7 = 495 $ 元。\n2. 计算商品总价：商品 B286 的商品总",
+      "sequence_ok": false,
+      "arguments_ok": false,
+      "amount_ok": false,
+      "success": false
+    },
+    {
+      "order_id": "C319",
+      "question": "我想知道 C319 这张订单的应付金额。",
+      "expected_total": "88.88",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "get_order_id",
+          "arguments": {
+            "order_id": "31"
+          },
+          "result": {
+            "error": "未知工具"
+          }
+        },
+        {
+          "turn": 2,
+          "name": "get_amount",
+          "arguments": {
+            "quantity": "50000"
+          },
+          "result": {
+            "error": "未知工具"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": "50000"
+          },
+          "result": {
+            "error": "数量或单价格式错误"
+          }
+        }
+      ],
+      "answer": "看起来你没有提供具体的订单信息，但根据你的描述，我无法直接计算出该订单的应付金额。\n\n不过，我可以帮你一步步完成这个任务：\n\n1. **计算订单金额**：订单的订单编号为31（订单编号）。\n2. **计算应付金额**：订单的应付金额为50000元。\n3. **获取当前订单金额**：订单的应付金额为50000元。\n\n如果你能提供订单的详细信息，",
+      "sequence_ok": false,
+      "arguments_ok": false,
+      "amount_ok": false,
+      "success": false
+    },
+    {
+      "order_id": "C374",
+      "question": "查一下 C374 这单的商品总价。",
+      "expected_total": "25.00",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "get_exchange_rate",
+          "arguments": {
+            "from": "C374",
+            "to": "C374"
+          },
+          "result": {
+            "error": "未知工具"
+          }
+        },
+        {
+          "turn": 2,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 1
+          },
+          "result": {
+            "error": "数量或单价格式错误"
+          }
+        }
+      ],
+      "answer": "根据您提供的信息，我无法直接获取 C374 这单的商品总价。不过，您提到的“商品总价”可能是指您提供的商品单价，但无法精确计算总价。\n\n如果您能提供具体的商品价格（例如：商品A、B、C 的单价），我可以帮您计算总价。请提供商品单价，我将立即为您计算。",
+      "sequence_ok": false,
+      "arguments_ok": false,
+      "amount_ok": false,
+      "success": false
+    },
+    {
+      "order_id": "D428",
+      "question": "请问订单 D428 一共多少钱？",
+      "expected_total": "143.94",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "get_exchange_rate",
+          "arguments": {
+            "from_currency": "USD",
+            "to_currency": "CNY"
+          },
+          "result": {
+            "error": "未知工具"
+          }
+        },
+        {
+          "turn": 2,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": "500"
+          },
+          "result": {
+            "error": "数量或单价格式错误"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 500,
+            "unit_price": 0.0
+          },
+          "result": {
+            "total": "0.00"
+          }
+        }
+      ],
+      "answer": "根据查询结果，D428 一共0.00 元。\n\n关于订单 D428 一共多少钱，我无法提供具体金额，因为没有提供订单数量。请补充信息以便我继续计算。",
+      "sequence_ok": false,
+      "arguments_ok": false,
+      "amount_ok": false,
+      "success": false
+    },
+    {
+      "order_id": "D581",
+      "question": "帮我确认 D581 的应付总额。",
+      "expected_total": "28.80",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "581"
+          },
+          "result": {
+            "error": "找不到该订单"
+          }
+        },
+        {
+          "turn": 2,
+          "name": "get_exchange_rate",
+          "arguments": {
+            "from": "order_id",
+            "to": "order_date"
+          },
+          "result": {
+            "error": "未知工具"
+          }
+        }
+      ],
+      "answer": "我已查询到你提到的订单数据，但无法获取到任何实际的订单信息。\n\n**请确认是否需要我提供其他信息**：\n- 订单编号：581\n- 商品单价：0元/件\n\n**请确认是否需要我帮你查找或获取其他相关信息**\n\n建议你：\n- 如果你希望我协助查找某个订单或获取其他相关信息（例如订单编号、商品描述等）\n- 如果需要，我可以帮你查找或获取其他信息（例如商品价格、库存状态等",
+      "sequence_ok": false,
+      "arguments_ok": false,
+      "amount_ok": false,
+      "success": false
+    }
+  ]
+}

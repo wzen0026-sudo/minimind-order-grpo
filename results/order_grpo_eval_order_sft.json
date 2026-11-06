@@ -1,0 +1,1069 @@
+{
+  "weight": "order_sft",
+  "seed": 42,
+  "total": 24,
+  "summary": {
+    "sequence_ok": 24,
+    "arguments_ok": 24,
+    "amount_ok": 18,
+    "success": 18
+  },
+  "cases": [
+    {
+      "order_id": "A828",
+      "question": "A828 这笔订单一共要付多少钱？",
+      "expected_total": "68.30",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "A828"
+          },
+          "result": {
+            "product_id": "P393",
+            "quantity": 2
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P393"
+          },
+          "result": {
+            "unit_price": "34.15"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 2,
+            "unit_price": "34.15"
+          },
+          "result": {
+            "total": "68.30"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"68.30\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "C643",
+      "question": "帮我算一下订单 C643 的商品总金额。",
+      "expected_total": "341.95",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "C643"
+          },
+          "result": {
+            "product_id": "P887",
+            "quantity": 5
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P887"
+          },
+          "result": {
+            "unit_price": "68.39"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 5,
+            "unit_price": "68.39"
+          },
+          "result": {
+            "total": "341.95"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"341.95\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "B200",
+      "question": "请核对 B200 这单的商品合计。",
+      "expected_total": "169.68",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "B200"
+          },
+          "result": {
+            "product_id": "P365",
+            "quantity": 3
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P365"
+          },
+          "result": {
+            "unit_price": "56.56"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 3,
+            "unit_price": "56.56"
+          },
+          "result": {
+            "total": "169.68"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"169.68\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "C956",
+      "question": "订单 C956 的商品加起来多少钱？",
+      "expected_total": "307.44",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "C956"
+          },
+          "result": {
+            "product_id": "P399",
+            "quantity": 4
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P399"
+          },
+          "result": {
+            "unit_price": "76.86"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 4,
+            "unit_price": "76.86"
+          },
+          "result": {
+            "total": "307.44"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"307.44\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "A665",
+      "question": "我想知道 A665 这张订单的应付金额。",
+      "expected_total": "590.10",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "A665"
+          },
+          "result": {
+            "product_id": "P388",
+            "quantity": 6
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P388"
+          },
+          "result": {
+            "unit_price": "98.35"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 6,
+            "unit_price": "98.35"
+          },
+          "result": {
+            "total": "590.10"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"590.10\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "A835",
+      "question": "查一下 A835 这单的商品总价。",
+      "expected_total": "64.60",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "A835"
+          },
+          "result": {
+            "product_id": "P994",
+            "quantity": 4
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P994"
+          },
+          "result": {
+            "unit_price": "16.15"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 4,
+            "unit_price": "16.15"
+          },
+          "result": {
+            "total": "64.60"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"64.60\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "D930",
+      "question": "请问订单 D930 一共多少钱？",
+      "expected_total": "167.04",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "D930"
+          },
+          "result": {
+            "product_id": "P919",
+            "quantity": 9
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P919"
+          },
+          "result": {
+            "unit_price": "18.56"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 9,
+            "unit_price": "18.56"
+          },
+          "result": {
+            "total": "167.04"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"167.04\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "D634",
+      "question": "帮我确认 D634 的应付总额。",
+      "expected_total": "170.95",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "D634"
+          },
+          "result": {
+            "product_id": "P233",
+            "quantity": 5
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P233"
+          },
+          "result": {
+            "unit_price": "34.19"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 5,
+            "unit_price": "34.19"
+          },
+          "result": {
+            "total": "170.95"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"170.95\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "D571",
+      "question": "D571 这笔订单一共要付多少钱？",
+      "expected_total": "27.50",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "D571"
+          },
+          "result": {
+            "product_id": "P563",
+            "quantity": 2
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P563"
+          },
+          "result": {
+            "unit_price": "13.75"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 2,
+            "unit_price": "13.75"
+          },
+          "result": {
+            "total": "27.50"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"27.50\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "C698",
+      "question": "帮我算一下订单 C698 的商品总金额。",
+      "expected_total": "48.40",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "C698"
+          },
+          "result": {
+            "product_id": "P325",
+            "quantity": 4
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P325"
+          },
+          "result": {
+            "unit_price": "12.10"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 4,
+            "unit_price": "12.10"
+          },
+          "result": {
+            "total": "48.40"
+          }
+        }
+      ],
+      "answer": "<tool_call>\n{\"name\": \"lookup_price\", \"arguments\": {\"quantity\": 4, \"unit_price\": \"12.40\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": false,
+      "success": false
+    },
+    {
+      "order_id": "B508",
+      "question": "请核对 B508 这单的商品合计。",
+      "expected_total": "816.57",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "B508"
+          },
+          "result": {
+            "product_id": "P355",
+            "quantity": 9
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P355"
+          },
+          "result": {
+            "unit_price": "90.73"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 9,
+            "unit_price": "90.73"
+          },
+          "result": {
+            "total": "816.57"
+          }
+        }
+      ],
+      "answer": "<tool_call>\n{\"name\": \"calculate_total\", \"arguments\": {\"quantity\": 9, \"unit_price\": \"90.73\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": false,
+      "success": false
+    },
+    {
+      "order_id": "B760",
+      "question": "订单 B760 的商品加起来多少钱？",
+      "expected_total": "261.60",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "B760"
+          },
+          "result": {
+            "product_id": "P690",
+            "quantity": 6
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P690"
+          },
+          "result": {
+            "unit_price": "43.60"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 6,
+            "unit_price": "43.60"
+          },
+          "result": {
+            "total": "261.60"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"261.60\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "C612",
+      "question": "我想知道 C612 这张订单的应付金额。",
+      "expected_total": "35.22",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "C612"
+          },
+          "result": {
+            "product_id": "P855",
+            "quantity": 6
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P855"
+          },
+          "result": {
+            "unit_price": "5.87"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 6,
+            "unit_price": "5.87"
+          },
+          "result": {
+            "total": "35.22"
+          }
+        }
+      ],
+      "answer": "<tool_call>\n{\"name\": \"calculate_total\", \"arguments\": {\"quantity\": 6, \"unit_price\": \"5.22\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": false,
+      "success": false
+    },
+    {
+      "order_id": "C647",
+      "question": "查一下 C647 这单的商品总价。",
+      "expected_total": "373.15",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "C647"
+          },
+          "result": {
+            "product_id": "P374",
+            "quantity": 5
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P374"
+          },
+          "result": {
+            "unit_price": "74.63"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 5,
+            "unit_price": "74.63"
+          },
+          "result": {
+            "total": "373.15"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"373.15\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "D255",
+      "question": "请问订单 D255 一共多少钱？",
+      "expected_total": "442.50",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "D255"
+          },
+          "result": {
+            "product_id": "P569",
+            "quantity": 5
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P569"
+          },
+          "result": {
+            "unit_price": "88.50"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 5,
+            "unit_price": "88.50"
+          },
+          "result": {
+            "total": "442.50"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"442.50\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "C150",
+      "question": "帮我确认 C150 的应付总额。",
+      "expected_total": "82.40",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "C150"
+          },
+          "result": {
+            "product_id": "P948",
+            "quantity": 2
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P948"
+          },
+          "result": {
+            "unit_price": "41.20"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 2,
+            "unit_price": "41.20"
+          },
+          "result": {
+            "total": "82.40"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"82.40\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "C637",
+      "question": "C637 这笔订单一共要付多少钱？",
+      "expected_total": "466.20",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "C637"
+          },
+          "result": {
+            "product_id": "P920",
+            "quantity": 6
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P920"
+          },
+          "result": {
+            "unit_price": "77.70"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 6,
+            "unit_price": "77.70"
+          },
+          "result": {
+            "total": "466.20"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"466.20\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "D201",
+      "question": "帮我算一下订单 D201 的商品总金额。",
+      "expected_total": "283.60",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "D201"
+          },
+          "result": {
+            "product_id": "P494",
+            "quantity": 4
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P494"
+          },
+          "result": {
+            "unit_price": "70.90"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 4,
+            "unit_price": "70.90"
+          },
+          "result": {
+            "total": "283.60"
+          }
+        }
+      ],
+      "answer": "<tool_call>\n{\"name\": \"calculate_total\", \"arguments\": {\"quantity\": 4, \"unit_price\": \"283.60\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": false,
+      "success": false
+    },
+    {
+      "order_id": "A405",
+      "question": "请核对 A405 这单的商品合计。",
+      "expected_total": "111.20",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "A405"
+          },
+          "result": {
+            "product_id": "P271",
+            "quantity": 2
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P271"
+          },
+          "result": {
+            "unit_price": "55.60"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 2,
+            "unit_price": "55.60"
+          },
+          "result": {
+            "total": "111.20"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"111.20\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "A467",
+      "question": "订单 A467 的商品加起来多少钱？",
+      "expected_total": "360.88",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "A467"
+          },
+          "result": {
+            "product_id": "P396",
+            "quantity": 4
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P396"
+          },
+          "result": {
+            "unit_price": "90.22"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 4,
+            "unit_price": "90.22"
+          },
+          "result": {
+            "total": "360.88"
+          }
+        }
+      ],
+      "answer": "<tool_call>\n{\"name\": \"calculate_total\", \"arguments\": {\"quantity\": 4, \"unit_price\": \"90.22\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": false,
+      "success": false
+    },
+    {
+      "order_id": "C460",
+      "question": "我想知道 C460 这张订单的应付金额。",
+      "expected_total": "141.64",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "C460"
+          },
+          "result": {
+            "product_id": "P412",
+            "quantity": 4
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P412"
+          },
+          "result": {
+            "unit_price": "35.41"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 4,
+            "unit_price": "35.41"
+          },
+          "result": {
+            "total": "141.64"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"141.64\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "D374",
+      "question": "查一下 D374 这单的商品总价。",
+      "expected_total": "375.21",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "D374"
+          },
+          "result": {
+            "product_id": "P245",
+            "quantity": 9
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P245"
+          },
+          "result": {
+            "unit_price": "41.69"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 9,
+            "unit_price": "41.69"
+          },
+          "result": {
+            "total": "375.21"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"375.21\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    },
+    {
+      "order_id": "B386",
+      "question": "请问订单 B386 一共多少钱？",
+      "expected_total": "339.12",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "B386"
+          },
+          "result": {
+            "product_id": "P473",
+            "quantity": 9
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P473"
+          },
+          "result": {
+            "unit_price": "37.68"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 9,
+            "unit_price": "37.68"
+          },
+          "result": {
+            "total": "339.12"
+          }
+        }
+      ],
+      "answer": "<tool_call>\n{\"name\": \"lookup_price\", \"arguments\": {\"arguments\": {\"quantity\": 9, \"unit_price\": \"37.68\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": false,
+      "success": false
+    },
+    {
+      "order_id": "D848",
+      "question": "帮我确认 D848 的应付总额。",
+      "expected_total": "343.07",
+      "calls": [
+        {
+          "turn": 1,
+          "name": "lookup_order",
+          "arguments": {
+            "order_id": "D848"
+          },
+          "result": {
+            "product_id": "P664",
+            "quantity": 7
+          }
+        },
+        {
+          "turn": 2,
+          "name": "lookup_price",
+          "arguments": {
+            "product_id": "P664"
+          },
+          "result": {
+            "unit_price": "49.01"
+          }
+        },
+        {
+          "turn": 3,
+          "name": "calculate_total",
+          "arguments": {
+            "quantity": 7,
+            "unit_price": "49.01"
+          },
+          "result": {
+            "total": "343.07"
+          }
+        }
+      ],
+      "answer": "{\"total\":\"343.07\"}",
+      "sequence_ok": true,
+      "arguments_ok": true,
+      "amount_ok": true,
+      "success": true
+    }
+  ]
+}
